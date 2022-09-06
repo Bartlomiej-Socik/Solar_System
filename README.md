@@ -6,3 +6,4 @@ Celem projektu było stworzenie makiety Układu Słonecznego, który w zadowalaj
 Przed uruchomieniem aplikacji należy wgrać wszystkie używane biblioteki. Następnie po uruchomieniu programu w celu poruszania kamery należy korzystać z: 
 •	Scrolla myszki - oddalania i przybliżanie obrazu w stosunku do słońca
 •	Prawy klawisz myszki – obracanie obrazu względem słońca
+![image](https://user-images.githubusercontent.com/110342603/188725743-ac43fc18-965f-469b-a557-c95adc4cddc8.png)
