@@ -43,17 +43,11 @@ def update():
     Orbital_period(sphere7,Uranus,1e9), Orbital_period(moon7_03,Titania,5e8), Orbital_period(moon7_04,Oberon,5e8)
     Orbital_period(sphere8,Neptune,1e9), Orbital_period(moon8_01,Triton,2e8)
 
-    if held_keys[mouse.left]:
-        txt2 = Text(text=str(t), x=-0.7, y=0.4)
-    #txt2 = Text(text=str(t), x=-0.7, y=0.4)
 
 
 app = Ursina()
 window.color = color.black
 background_music = Audio('Assets\Interstellar Main Theme - Hans Zimmer.mp3', volume=0.5, pitch=1, loop=True, autoplay=True)
-#window.title = 'Solar System'
-#window.texture = load_texture('Assets\Textures\Space.png')
-#Sky(model = 'sphere', texture = load_texture('Assets\Textures\Space.png'), scale=10000, double_sided = True)
 background_music.play()
 
 sphere0 = Entity(model='sphere', collider='mesh', texture=load_texture(Sun.texture), scale=Sun.radius/1e7, position = (0,0,0), shader=lit_with_shadows_shader)
@@ -81,26 +75,13 @@ moon7_03 = Entity(name=Titania.name, parent=sphere7, model='sphere', texture=loa
 moon7_04 = Entity(name=Oberon.name, parent=sphere7, model='sphere', texture=load_texture(Oberon.texture), scale=Oberon.radius_scale_planet)
 moon8_01 = Entity(name=Triton.name, parent=sphere8, model='sphere', texture=load_texture(Triton.texture), scale=Triton.radius_scale_planet)
 
-star0 = Entity(model='sphere', color=color.white, scale=4, position=(2000, 1000, 200), shader=lit_with_shadows_shader)###############
-#star1 = Entity(model='sphere', color=color.white, scale=15, position=(9000, 0, 0), shader=lit_with_shadows_shader)
+star0 = Entity(model='sphere', color=color.white, scale=4, position=(2000, 1000, 200), shader=lit_with_shadows_shader)
+
 
 t = -np.pi
 
-#LightSun = PointLight(shadows=True)
-#LightStar=duplicate(LightSun,position=(800, 100, 200),shadows=True)
+LightSun = PointLight(shadows=True)
 txt = Text(text="Solar System", x=-0.88, y=-0.45)
-#txt1 = Text(text=str(t), x=-0.8, y=0.4)
-#b = Button(text='Star', color=color.azure, x=-0.8, y=0.4, scale=.1)
-DropdownMenu(text='Planet', color=color.gray, buttons=(
-    DropdownMenuButton('Mercury'),
-    DropdownMenuButton('Venus'),
-    DropdownMenuButton('Earth'),
-    DropdownMenuButton('Mars'),
-    DropdownMenu('Gas planet', buttons=(
-        DropdownMenuButton('Jupiter'),
-        DropdownMenuButton('Saturn'),
-        )),
-    ),)
 
 
 EditorCamera()
