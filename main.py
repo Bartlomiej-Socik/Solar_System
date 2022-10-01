@@ -83,6 +83,16 @@ t = -np.pi
 LightSun = PointLight(shadows=True)
 txt = Text(text="Solar System", x=-0.88, y=-0.45)
 
+DropdownMenu(text='Planet', color=color.gray, buttons=(
+    DropdownMenuButton('Mercury'),
+    DropdownMenuButton('Venus'),
+    DropdownMenuButton('Earth'),
+    DropdownMenuButton('Mars'),
+    DropdownMenuButton('Jupiter'),
+    DropdownMenuButton('Saturn'),
+    DropdownMenuButton('Uranus'),
+    DropdownMenuButton('Neptune'),
+    ),)
 
 EditorCamera()
 
